@@ -42,6 +42,9 @@ CREATE TABLE actor (
 
 ```sh
 docker exec -i javabdd-1-mysql-1 mysql -u admin -padminpassword sakila < 1-sakila-schema.sql
+```
+
+```sh
 docker exec -i javabdd-1-mysql-1 mysql -u admin -padminpassword sakila < 2-sakila-data.sql
 ```
 
@@ -49,5 +52,8 @@ docker exec -i javabdd-1-mysql-1 mysql -u admin -padminpassword sakila < 2-sakil
 
 ```sh
 javac -d out -cp lib/mysql-connector-java-8.0.26.jar:lib/postgresql-42.2.23.jar src/main/java/BDD/DataTransfer.java
+```
+
+```sh
 java -cp out:lib/mysql-connector-java-8.0.26.jar:lib/postgresql-42.2.23.jar BDD.DataTransfer
 ```
